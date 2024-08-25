@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Form } from "@/components/ui/form"
 import CustomFormField from "../ui/CustomFormField"
 import UserIcon from "@/public/assets/icons/user.svg"
+import EmailIcon from "@/public/assets/icons/email.svg"
 
 export enum FormFieldType {
     INPUT = "input",
@@ -52,6 +53,24 @@ const PatientForm = () => {
             placeholder = "John Doe"
             iconSrc={UserIcon}
             iconAlt="user"
+        />
+
+        <CustomFormField
+            fieldType={FormFieldType.INPUT} 
+            control={form.control}
+            name = "email"
+            label = "Email"
+            placeholder = "johndoe@gmail.com"
+            iconSrc={EmailIcon}
+            iconAlt="email"
+        />
+
+        <CustomFormField
+            fieldType={FormFieldType.PHONE_INPUT} 
+            control={form.control}
+            name = "phone"
+            label = "Phone number"
+            placeholder = "123-456-7890"
         />
 
 
